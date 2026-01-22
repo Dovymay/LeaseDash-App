@@ -1,0 +1,292 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background: url('../src/assets/Background.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.navbar {
+  background-image: url('../src/assets/LeaseDash-Navbar-background.png');
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  height: 22vh;
+}
+
+.logo-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+  height: 22vh;
+}
+
+.footer { 
+  /* position: fixed;
+  left: 0;            -> Uncomment for the footer to become always visible
+  bottom: 0; */
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(17, 81, 154, 0.96);
+  padding: 16px 0;
+}
+
+.github-link {
+  display: flex;
+  align-items: center;
+}
+
+.github-icon {
+  height: 40px;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.github-icon:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.main-layout {
+  flex: 1;
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  position: fixed;
+  /* top: 0;                 */
+  left: 0;
+
+  height: 100vh;
+  width: 220px;
+
+  background-color: rgba(14, 24, 42, 0.97);
+  z-index: 1000;          
+
+  display: flex;
+  flex-direction: column;
+  padding: 24px 12px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.05rem;
+  padding: 10px 14px;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background-color: rgba(99, 102, 241, 0.15);
+  color: #ffffff;
+}
+
+.content {
+  margin-left: 220px;     
+  padding: 24px;
+}
+
+.image {
+  width: 15vw;
+  height: 15vh;
+}
+
+.not-found-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(238, 255, 255);
+}
+
+.notFoundImage {
+  max-width: 100vw;
+  max-height: 100vh;
+  object-fit: cover;
+}
+
+.GitHUB-icon {
+  height: 5vh;
+  width: 4vw;
+  border-radius: 8px;
+}
+
+.LinkedIn-icon {
+    height: 5vh;
+    width: 4vw;
+}
+
+.aboutImages {
+  display: flex;
+  justify-content: center;
+}
+
+.listingsContainer {
+  display: grid;
+  grid-template-columns:
+    160px   /* image */
+    2fr     /* title */
+    1fr     /* id */
+    1fr     /* price */
+    1.5fr   /* location */
+    1.5fr   /* owner */
+    1fr     /* license */
+    1fr     /* available */
+    140px;  /* actions */
+
+  align-items: center;
+  gap: 16px;
+
+  padding: 16px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+  color: black;
+}
+
+.listing-image {
+  width: 140px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.listing-title {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.listing-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.delete-button {
+  background-color: rgb(17, 17, 17);
+  color: aqua;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: aqua;
+  font-weight: bolder;
+  border-radius: 8px;
+  size: 15vh;
+  cursor: pointer;
+}
+
+.detailsPage {
+  padding: 3vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border: 4px solid rgb(109, 173, 220);
+  border-radius: 8px;
+}
+
+.detailsImage{
+  margin: 3vh;
+  max-width: 50vw;
+  max-height: 50vh;
+  object-fit: cover;
+}
+
+.form-page {
+  min-width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(14, 24, 42, 0.97);
+  color: #ffffff;
+  margin: 0;
+  padding: 3vh;
+  max-width: 350px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+label {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: large;
+}
+
+.h-1 {
+  margin-top: 0;
+  margin: 0;
+  justify-content: center;
+  display: flex;
+}
+
+h1 {
+  margin: 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 2vh;
+  font-size: large;
+}
+
+.pagination-buttons {
+  background-color: rgb(17, 17, 17);
+  color: aqua;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
